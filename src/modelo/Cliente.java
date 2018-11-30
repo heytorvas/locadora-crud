@@ -1,5 +1,7 @@
 package modelo;
 
+import java.util.Scanner;
+
 public class Cliente extends Pessoa implements Impressao
 {
 
@@ -7,6 +9,7 @@ public class Cliente extends Pessoa implements Impressao
     private Planos planos;
     private String username;
     private String password;
+    Scanner leia = new Scanner(System.in);
 
     public Cliente(){}
     public Cliente(int idCliente, Planos planos, String username, String password) {
@@ -46,7 +49,7 @@ public class Cliente extends Pessoa implements Impressao
         System.out.println(this.toString());
     }
     public void menuClienteLogin(){
-        System.out.println("cliente");
+   
     }
     public Cliente cadastrarCliente(){
         Cliente c = new Cliente();
