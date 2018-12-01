@@ -2,9 +2,9 @@ package modelo;
 
 public enum Planos
 {
-    BASICO(0, "Basico", "3 filmes por mês", 10.90),
-    PLUS(1, "Plus", "5 filmes por mês", 15.90),
-    VIP(2, "Vip", "10 filmes por mês", 20.90);
+    BASICO(0, "Basico", "3 filmes por mes", 10.90),
+    PLUS(1, "Plus", "5 filmes por mes", 15.90),
+    VIP(2, "Vip", "10 filmes por mes", 20.90);
 
     // atributos
     private int id;

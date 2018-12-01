@@ -2,9 +2,9 @@ package modelo;
 
 public enum GeneroFilme
 {
-    ACAO(0, "Ação"), ANIMACAO(1, "Animação"), COMEDIA(2, "Comédia"),
-    DRAMA(4, "Drama"), DOCUMENTARIO(5, "Documentário"), FICCAO_CIENTIFICA(6, "Ficção Científica"),
-    ROMANCE(7, "Romance"), SUSPENSE(8, "Suspense"), TERROR(9, "Terror"), RELIGIAO(9,"Religião");
+    ACAO(0, "Acao"), ANIMACAO(1, "Animacao"), COMEDIA(2, "Comedia"),
+    DRAMA(3, "Drama"), DOCUMENTARIO(4, "Documentario"), FICCAO_CIENTIFICA(5, "Ficcao Cientifica"),
+    RELIGIAO(6,"Religiao"), ROMANCE(7, "Romance"), SUSPENSE(8, "Suspense"), TERROR(9, "Terror");
 
     // atributos
     private int id;
