@@ -41,13 +41,13 @@ public class Funcionario extends Pessoa implements Interface {
 
     @Override
     public void menu() {
-        System.out.println("===== LOCADORA LABAXURIAS SIRICANTAS =====");
-        System.out.println("=========== MENU FUNCIONARIO ========== \n");
-        System.out.println(" (1) - Cadastrar filme;");
-        System.out.println(" (2) - Editar filme;");
-        System.out.println(" (3) - Consultar filme;");
-        System.out.println(" (4) - Excluir filme;");
-        System.out.println(" (5) - Sair;");
+        System.out.println("\n===== LOCADORA LABAXURIAS SIRICANTAS =====");
+        System.out.println("=========== MENU FUNCIONARIO ==========");
+        System.out.println(" (1) - CADASTRAR FILME;");
+        System.out.println(" (2) - EDITAR FILME;");
+        System.out.println(" (3) - CONSULTAR FILME;");
+        System.out.println(" (4) - EXCLUIR FILME;");
+        System.out.println(" (5) - SAIR;");
         int opcao = sc.nextInt();
         switch (opcao) {
             case 1:

@@ -62,26 +62,27 @@ public class SQL {
         pessoa.add(funcionario1);
         pessoa.add(funcionario2);
         pessoa.add(funcionario3);
+
     }
     public static void cadastrarFilme(){
         Filme filme = new Filme();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Informe o id do filme: ");
+        System.out.println("INFORME O ID DO FILME: ");
         filme.setIdFilme(sc.nextInt());
         sc.nextLine(); //gambiarra
-        System.out.println("Informe o nome do filme: ");
+        System.out.println("INFORME O NOME DO FILME: ");
         filme.setNomeFilme(sc.nextLine());
-        System.out.println("Informe o genero do filme: ");
-        System.out.println("\t(0) - Acao;");
-        System.out.println("\t(1) - Animacao;");
-        System.out.println("\t(2) - Comedia;");
-        System.out.println("\t(3) - Drama;");
-        System.out.println("\t(4) - Documentario;");
-        System.out.println("\t(5) - Ficcao Cientifica;");
-        System.out.println("\t(6) - Religiao;");
-        System.out.println("\t(7) - Romance;");
-        System.out.println("\t(8) - Suspense;");
-        System.out.println("\t(9) - Terror;");
+        System.out.println("INFORME O GENERO DO FILME: ");
+        System.out.println("\t(0) - ACAO;");
+        System.out.println("\t(1) - ANIMACAO;");
+        System.out.println("\t(2) - COMEDIA;");
+        System.out.println("\t(3) - DRAMA;");
+        System.out.println("\t(4) - DOCUMENTARIO;");
+        System.out.println("\t(5) - FICCAO CIENTIFICA;");
+        System.out.println("\t(6) - RELIGIAO;");
+        System.out.println("\t(7) - ROMANCE;");
+        System.out.println("\t(8) - SUSPENSE;");
+        System.out.println("\t(9) - TERROR;");
         int escolha = sc.nextInt();
         sc.nextLine(); // gambiarra
         switch (escolha) {
@@ -119,23 +120,23 @@ public class SQL {
                 System.out.println("USER BURRO");
                 break;
         }
-        System.out.println("Informe o diretor do filme: ");
+        System.out.println("INFORME O DIRETOR DO FILME: ");
         filme.setDiretorFilme(sc.nextLine());
-        System.out.println("informe o ano de lancamento do filme: ");
+        System.out.println("INFORME O ANO DE LANCAMENTO DO FILME: ");
         filme.setAnoLancamento(sc.nextInt());
         sc.nextLine(); //gambiarra
-        System.out.println("Informe a duracao do filme: ");
+        System.out.println("INFORME A DURACAO DO FILME: ");
         filme.setDuracaoFilme(sc.nextInt());
         sc.nextLine();
     }
     public static void consultarFilme(){
         Scanner sc = new Scanner(System.in);
         System.out.println("ESCOLHA O TIPO DE CONSULTA: ");
-        System.out.println(" (1) - Listar todos os filmes cadastrados;");
-        System.out.println(" (2) - Listar os filmes por ordem alfabetica;");
-        System.out.println(" (3) - Listar os filmes pelo genero escolhido: ;");
-        System.out.println(" (4) - Excluir filme;");
-        System.out.println(" (5) - Sair;");
+        System.out.println("\t(1) - LISTAR TODOS OS FILMES POR ORDEM ALFABETICA;");
+        System.out.println("\t(2) - LISTAR OS FILMES POR ORDEM ALFABETICA;");
+        System.out.println("\t(3) - LISTAR OS FILMES POR GENERO ESCOLHIDO;");
+        System.out.println("\t(4) - LISTAR OS FILMES POR DIRETOR;");
+        System.out.println("\t(5) - LISTAR OS FILMES POR ANO DE LANCAMENTO;");
         int choice = sc.nextInt();
         sc.nextLine(); //gambiarra
         switch (choice){
@@ -145,6 +146,8 @@ public class SQL {
             case 2:
                 //SQL.imprimirListaOrdenadaNomeFilme(listaFilme);
                 break;
+            case 3:
+                //imprimirListaGeneroFilme(listafilme, GeneroFilme.ANIMACAO);
         }
     }
     /**
@@ -159,12 +162,10 @@ public class SQL {
         lista.stream().sorted((filme1, filme2) -> filme1.getNomeFilme().compareTo(filme2.getNomeFilme()))
                 .forEach(p -> p.imprimir());
     }
-
     // Imprimindo Filme pelo Genero desejado
     public static void imprimirListaGeneroFilme(List<Filme> lista, GeneroFilme generoFilme) {
         lista.stream().filter(p -> p.getGeneroFilme().equals(generoFilme)).forEach(p -> p.imprimir());
     }
-
     // Ordenando por Nomes dos Diretores
     public static void imprimirListaOrdenadaDiretores(List<Filme> lista) {
         lista.stream().sorted((filme1, filme2) -> filme1.getDiretorFilme().compareTo(filme2.getDiretorFilme()))
@@ -190,7 +191,7 @@ public class SQL {
         try {
             return usuarioLogado[0];
         } catch (Exception e) {
-            System.out.println("Usuário e/ou Senha incorretos");
+            System.out.println("USUARIO E/OU SENHA INCORRETOS");
             return null;
         }
     }

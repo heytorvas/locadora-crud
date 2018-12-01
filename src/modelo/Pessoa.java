@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pessoa implements Interface {
-	List<Pessoa> pessoa = new ArrayList<Pessoa>();
 	private String nome;
 	private String cpf;
 	private String email;
@@ -65,7 +64,6 @@ public class Pessoa implements Interface {
 	@Override
 	public String toString() {
 		return "Pessoa{" +
-				"pessoa=" + pessoa +
 				", nome='" + nome + '\'' +
 				", cpf='" + cpf + '\'' +
 				", email='" + email + '\'' +
