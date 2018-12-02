@@ -38,8 +38,4 @@ public class Funcionario extends Pessoa implements Interface {
     public void imprimir() {
 
     }
-
-    @Override
-    public void menu() {
-    }
 }

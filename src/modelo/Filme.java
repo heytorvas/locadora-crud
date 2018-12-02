@@ -4,8 +4,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Filme {
-
-    private int idFilme;
+    private Integer idFilme;
     private int duracaoFilme;
     private int anoLancamento;
     private String nomeFilme;
@@ -26,11 +25,11 @@ public class Filme {
         this.generoFilme = generoFilme;
     }
 
-    public int getIdFilme() {
+    public Integer getIdFilme() {
         return idFilme;
     }
 
-    public void setIdFilme(int idFilme) {
+    public void setIdFilme(Integer idFilme) {
         this.idFilme = idFilme;
     }
 
@@ -76,9 +75,9 @@ public class Filme {
 
     @Override
     public String toString() {
-        return "Filme [idFilme=" + idFilme + ", nomeFilme=" + nomeFilme + ", generoFilme=" + generoFilme
-                + ", diretorFilme=" + diretorFilme + ", anoLancamento=" + anoLancamento + ", duracaoFilme="
-                + duracaoFilme + "]";
+        return "ID: " + idFilme + ", NOME: " + nomeFilme + ", GENERO: " + generoFilme
+                + ", DIRETOR: " + diretorFilme + ", ANO DE LANCAMENTO: " + anoLancamento + ", DURACAO: "
+                + duracaoFilme;
     }
 
     public void imprimir() {

@@ -1,7 +1,5 @@
 package modelo;
 
-import java.util.List;
-
 public class Cliente extends Pessoa implements Interface {
     private int idCliente;
     private Planos planos;
@@ -29,16 +27,8 @@ public class Cliente extends Pessoa implements Interface {
 
     @Override
     public void imprimir() {
-
+        System.out.println(this.toString());
     }
-
-    @Override
-    public void menu() {
-        System.out.println("\n===== LOCADORA LABAXURIAS SIRICANTAS =====");
-        System.out.println("=========== MENU CLIENTE ==========");
-        //SQL.consultarFilme(List<Filme> l);
-    }
-
 
 }
 

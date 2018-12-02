@@ -75,6 +75,4 @@ abstract public class Pessoa implements Interface {
 
 	}
 
-	@Override
-	abstract public void menu();
 }
