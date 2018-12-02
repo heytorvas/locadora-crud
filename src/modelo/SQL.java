@@ -8,7 +8,7 @@ public class SQL {
     List<Cliente> cliente = new ArrayList<Cliente>();
     List<Funcionario> funcionario = new ArrayList<Funcionario>();
     List<Pessoa> pessoa = new ArrayList<Pessoa>();
-    List<Filme> listaFilme = new ArrayList<Filme>();
+    static List<Filme> listaFilme = new ArrayList<Filme>();
 
     public void iniciar() {
         Cliente cliente1 = new Cliente(
@@ -132,7 +132,7 @@ public class SQL {
     public static void consultarFilme(){
         Scanner sc = new Scanner(System.in);
         System.out.println("ESCOLHA O TIPO DE CONSULTA: ");
-        System.out.println("\t(1) - LISTAR TODOS OS FILMES POR ORDEM ALFABETICA;");
+        System.out.println("\t(1) - LISTAR TODOS OS FILMES POR ID;");
         System.out.println("\t(2) - LISTAR OS FILMES POR ORDEM ALFABETICA;");
         System.out.println("\t(3) - LISTAR OS FILMES POR GENERO ESCOLHIDO;");
         System.out.println("\t(4) - LISTAR OS FILMES POR DIRETOR;");
@@ -141,44 +141,53 @@ public class SQL {
         sc.nextLine(); //gambiarra
         switch (choice){
             case 1:
-                //imprimirLista(listafilme);
+                imprimirLista(listaFilme);
                 break;
             case 2:
-                //SQL.imprimirListaOrdenadaNomeFilme(listaFilme);
+                imprimirListaOrdenadaNomeFilme(listaFilme);
                 break;
             case 3:
-                //imprimirListaGeneroFilme(listafilme, GeneroFilme.ANIMACAO);
+                imprimirListaGeneroFilme(listaFilme, GeneroFilme.ACAO);
+                break;
+            case 4:
+            	imprimirListaOrdenadaDiretores(listaFilme);
+            	break;
+            case 5:
+            	imprimirListaAnoLancamento(listaFilme);
         }
+    }
+    public void excluirFilme() {
+    	
     }
     /**
      * CONSULTAS DE FILMES
      **/
-    public static void imprimirLista(List<Filme> lista)
+    public static void imprimirLista(List<Filme> listaFilme)
     {
-        lista.forEach(p -> System.out.println(p));
+        listaFilme.forEach(p -> System.out.println(p));
     }
     // Ordenando por Nomes dos Filmes
-    public static void imprimirListaOrdenadaNomeFilme(List<Filme> lista) {
-        lista.stream().sorted((filme1, filme2) -> filme1.getNomeFilme().compareTo(filme2.getNomeFilme()))
+    public static void imprimirListaOrdenadaNomeFilme(List<Filme> listaFilme) {
+        listaFilme.stream().sorted((filme1, filme2) -> filme1.getNomeFilme().compareTo(filme2.getNomeFilme()))
                 .forEach(p -> p.imprimir());
     }
     // Imprimindo Filme pelo Genero desejado
-    public static void imprimirListaGeneroFilme(List<Filme> lista, GeneroFilme generoFilme) {
-        lista.stream().filter(p -> p.getGeneroFilme().equals(generoFilme)).forEach(p -> p.imprimir());
+    public static void imprimirListaGeneroFilme(List<Filme> listaFilme, GeneroFilme generoFilme) {
+        listaFilme.stream().filter(p -> p.getGeneroFilme().equals(generoFilme)).forEach(p -> p.imprimir());
     }
     // Ordenando por Nomes dos Diretores
-    public static void imprimirListaOrdenadaDiretores(List<Filme> lista) {
-        lista.stream().sorted((filme1, filme2) -> filme1.getDiretorFilme().compareTo(filme2.getDiretorFilme()))
+    public static void imprimirListaOrdenadaDiretores(List<Filme> listaFilme) {
+        listaFilme.stream().sorted((filme1, filme2) -> filme1.getDiretorFilme().compareTo(filme2.getDiretorFilme()))
                 .forEach(p -> p.imprimir());
     }
 
     // Imprimindo pelo ano de lancamento mais antigo
-    public static void imprimirListaAnoLancamento(List<Filme> lista) {
-        lista.sort((filme1, filme2) -> {
+    public static void imprimirListaAnoLancamento(List<Filme> listaFilme) {
+        listaFilme.sort((filme1, filme2) -> {
             Integer aux = filme1.getAnoLancamento();
             return aux.compareTo(filme2.getAnoLancamento());
         });
-        lista.forEach(p -> p.imprimir());
+        listaFilme.forEach(p -> p.imprimir());
     }
 
     public Pessoa login(String username, String password) {
