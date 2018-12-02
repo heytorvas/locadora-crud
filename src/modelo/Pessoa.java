@@ -1,9 +1,6 @@
 package modelo;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class Pessoa implements Interface {
+abstract public class Pessoa implements Interface {
 	private String nome;
 	private String cpf;
 	private String email;
@@ -79,7 +76,5 @@ public class Pessoa implements Interface {
 	}
 
 	@Override
-	public void menu() {
-
-	}
+	abstract public void menu();
 }
