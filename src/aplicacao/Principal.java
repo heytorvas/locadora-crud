@@ -18,11 +18,28 @@ public class Principal {
 				"melhorlinguagem", "java");
 		Funcionario funcionario1 = new Funcionario("peter parkerson", "012", "eunaosouhomemaranha@gmail.com",
 				Sexo.MASCULINO, 1, 50.00, "janio", "melhorprofessor");
-		Filme f1 = new Filme(1, "Jurassic Park", GeneroFilme.FICCAO_CIENTIFICA, "Steven Spielberg", 1998, 120);
-		Filme f2 = new Filme(2, "A Cabana", GeneroFilme.RELIGIAO, "William P. Young", 2017, 160);
-		Filme f3 = new Filme(3, "Vingadores", GeneroFilme.ACAO, "Stan Lee", 2018, 180);
-		Filme f4 = new Filme(4, "IT: A Coisa", GeneroFilme.TERROR, "Stephen King", 2017, 180);
-		Filme f5 = new Filme(5, "Jurassic Park 2", GeneroFilme.FICCAO_CIENTIFICA, "Steven Spielberg", 2000, 180);
+		Filme f1 = new Filme(1, "Jurassic Park", GeneroFilme.FICCAO_CIENTIFICA, "Steven Spielberg", 1995, 90);
+		Filme f2 = new Filme(2, "Interestelar", GeneroFilme.FICCAO_CIENTIFICA, "Christopher Nolan", 2014, 130);
+		Filme f3 = new Filme(3, "A Cabana", GeneroFilme.RELIGIAO, "William P. Young", 2017, 120);
+		Filme f4 = new Filme(4, "Deus Não Está Morto", GeneroFilme.RELIGIAO, "Harold Cronk", 2014, 70);
+		Filme f5 = new Filme(5, "Vingadores: Guerra Infinita", GeneroFilme.ACAO, "Stan Lee", 2018, 130);
+		Filme f6 = new Filme(6, "Velozes e Furiosos 8", GeneroFilme.ACAO, "Rob Cohen", 2017, 80);
+		Filme f7 = new Filme(7, "IT: A Coisa", GeneroFilme.TERROR, "Stephen King", 2017, 70);
+		Filme f8 = new Filme(8, "Atividade Paranormal", GeneroFilme.TERROR, "Oren Peli", 2009, 80);
+		Filme f9 = new Filme(9, "Fragmentado", GeneroFilme.SUSPENSE, "M. Night Shyamalan", 2016, 80);
+		Filme f10 = new Filme(10, "Corpo Fechado", GeneroFilme.SUSPENSE, "M. Night Shyamalan", 2000, 80);
+		Filme f11 = new Filme(11, "Gente Grande", GeneroFilme.COMEDIA, "Dennis Dugan", 2010, 80);
+		Filme f12 = new Filme(12, "As Branquelas", GeneroFilme.COMEDIA, "Keenen Ivory Wayans", 2004, 80);
+		Filme f13 = new Filme(13, "O Rei Leão", GeneroFilme.ANIMACAO, "George Scribner", 1998, 65);
+		Filme f14 = new Filme(14, "Toy Story", GeneroFilme.ANIMACAO, "John Lasseter", 2000, 65);
+		Filme f15 = new Filme(15, "A Reforma", GeneroFilme.DOCUMENTARIO, "Martinho Lutero", 1517, 75);
+		Filme f16 = new Filme(16, "Jobs", GeneroFilme.DOCUMENTARIO, "Apple", 2011, 85);
+		Filme f17 = new Filme(17, "Julimeu e Romieta", GeneroFilme.ROMANCE, "Por mim mesmo", 1750, 75);
+		Filme f18 = new Filme(18, "Calypso", GeneroFilme.ROMANCE, "Joelma e Chimbinha", 2016, 95);
+		Filme f19 = new Filme(19, "Titanic", GeneroFilme.DRAMA, "James Cameron", 1997, 75);
+		Filme f20 = new Filme(20, "O Menino do Pijama Listrado", GeneroFilme.DRAMA, "Mark Herman", 2008, 105);
+		
+		
 
 		// ATRIBUINDO OS OBJETOS NAS LISTAS
 		listaFilme.add(f1);
@@ -30,6 +47,21 @@ public class Principal {
 		listaFilme.add(f3);
 		listaFilme.add(f4);
 		listaFilme.add(f5);
+		listaFilme.add(f6);
+		listaFilme.add(f7);
+		listaFilme.add(f8);
+		listaFilme.add(f9);
+		listaFilme.add(f10);
+		listaFilme.add(f11);
+		listaFilme.add(f12);
+		listaFilme.add(f13);
+		listaFilme.add(f14);
+		listaFilme.add(f15);
+		listaFilme.add(f16);
+		listaFilme.add(f17);
+		listaFilme.add(f18);
+		listaFilme.add(f19);
+		listaFilme.add(f20);
 		cliente.add(cliente1);
 		funcionario.add(funcionario1);
 
