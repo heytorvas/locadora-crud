@@ -1,6 +1,8 @@
 package modelo;
 
-abstract public class Pessoa implements Interface {
+abstract public class Pessoa implements Interface
+{
+	// ATRIBUTOS
 	private String nome;
 	private String cpf;
 	private String email;
@@ -8,10 +10,12 @@ abstract public class Pessoa implements Interface {
 	private String username;
 	private String password;
 
-	public Pessoa() {
+	// CONSTRUTORES
+	public Pessoa()
+	{
 	}
-
-	public Pessoa(String nome, String cpf, String email, Sexo sexo, String username, String passowrd) {
+	public Pessoa(String nome, String cpf, String email, Sexo sexo, String username, String passowrd)
+	{
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
@@ -21,45 +25,60 @@ abstract public class Pessoa implements Interface {
 		this.password = passowrd;
 	}
 
-	public String getNome() {
+	// GETTERS E SETTERS
+	public String getNome()
+	{
 		return nome;
 	}
-	public void setNome(String nome) {
+	public void setNome(String nome)
+	{
 		this.nome = nome;
 	}
-	public String getCpf() {
+	public String getCpf()
+	{
 		return cpf;
 	}
-	public void setCpf(String cpf) {
+	public void setCpf(String cpf)
+	{
 		this.cpf = cpf;
 	}
-	public String getEmail() {
+	public String getEmail()
+	{
 		return email;
 	}
-	public void setEmail(String email) {
+	public void setEmail(String email)
+	{
 		this.email = email;
 	}
-	public Sexo getSexo() {
+	public Sexo getSexo()
+	{
 		return sexo;
 	}
-	public void setSexo(Sexo sexo) {
+	public void setSexo(Sexo sexo)
+	{
 		this.sexo = sexo;
 	}
-	public String getUsername() {
+	public String getUsername()
+	{
 		return username;
 	}
-	public void setUsername(String username) {
+	public void setUsername(String username)
+	{
 		this.username = username;
 	}
-	public String getPassword() {
+	public String getPassword()
+	{
 		return password;
 	}
-	public void setPassword(String password) {
+	public void setPassword(String password)
+	{
 		this.password = password;
 	}
 
+	// METODOS SOBRESCRITOS
 	@Override
-	public String toString() {
+	public String toString()
+	{
 		return "Pessoa{" +
 				", nome='" + nome + '\'' +
 				", cpf='" + cpf + '\'' +
@@ -69,10 +88,9 @@ abstract public class Pessoa implements Interface {
 				", password='" + password + '\'' +
 				'}';
 	}
-
 	@Override
-	public void imprimir() {
-
+	public void imprimir()
+	{
+		System.out.println(this.toString());
 	}
-
 }

@@ -1,32 +1,33 @@
 package modelo;
 
-import java.util.Scanner;
-
-public class Funcionario extends Pessoa implements Interface {
-    Scanner sc = new Scanner(System.in);
+public class Funcionario extends Pessoa implements Interface
+{
+    // ATRIBUTOS
     private int idFuncionario;
     private double salarioFuncionario;
 
-    public int getIdFuncionario() {
+    // GETTERS E SETTERS
+    public int getIdFuncionario()
+    {
         return idFuncionario;
     }
-
-    public void setIdFuncionario(int idFuncionario) {
+    public void setIdFuncionario(int idFuncionario)
+    {
         this.idFuncionario = idFuncionario;
     }
-
-    public double getSalarioFuncionario() {
+    public double getSalarioFuncionario()
+    {
         return salarioFuncionario;
     }
-
-    public void setSalarioFuncionario(double salarioFuncionario) {
+    public void setSalarioFuncionario(double salarioFuncionario)
+    {
         this.salarioFuncionario = salarioFuncionario;
     }
 
-    public Funcionario() {
-
+    // CONSTRUTORES
+    public Funcionario()
+    {
     }
-
     public Funcionario(String nome, String cpf, String email, Sexo sexo, int idFuncionario,
                        double salarioFuncionario, String username, String password) {
         super(nome, cpf, email, sexo, username, password);
@@ -34,8 +35,19 @@ public class Funcionario extends Pessoa implements Interface {
         this.salarioFuncionario = salarioFuncionario;
     }
 
+    // METODOS SOBRESCRITOS
     @Override
-    public void imprimir() {
-
+    public String toString()
+    {
+        return "FUNCIONARIO: " +
+                "ID: " + idFuncionario +
+                ", NOME: " + getNome() +
+                ", EMAIL: " + getEmail() +
+                ", SALARIO: " + salarioFuncionario;
+    }
+    @Override
+    public void imprimir()
+    {
+        System.out.println(this.toString());
     }
 }

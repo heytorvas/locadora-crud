@@ -6,18 +6,18 @@ public enum GeneroFilme
     DRAMA(3, "Drama"), DOCUMENTARIO(4, "Documentario"), FICCAO_CIENTIFICA(5, "Ficcao Cientifica"),
     RELIGIAO(6,"Religiao"), ROMANCE(7, "Romance"), SUSPENSE(8, "Suspense"), TERROR(9, "Terror");
 
-    // atributos
+    // ATRIBUTOS
     private int id;
     private String nome;
 
-    // construtor
+    // CONSTRUTOR
     private GeneroFilme(int id, String nome)
     {
         this.id = id;
         this.nome = nome;
     }
 
-    // getters
+    // GETTERS
     public int getId()
     {
         return id;

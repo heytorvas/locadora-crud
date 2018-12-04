@@ -6,13 +6,16 @@ public enum Planos
     PLUS(1, "Plus", "5 filmes por mes", 15.90),
     VIP(2, "Vip", "10 filmes por mes", 20.90);
 
-    // atributos
+    // ATRIBUTOS
     private int id;
     private String nome;
     private String descricao;
     private double preco;
 
-    // construtor
+    // CONSTRUTORES
+    private Planos()
+    {
+    }
     private Planos(int id, String nome, String descricao, double preco)
     {
         this.id = id;
@@ -20,7 +23,7 @@ public enum Planos
         this.preco = preco;
     }
 
-    // getters
+    // GETTERS
     public int getId()
     {
         return id;
